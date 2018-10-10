@@ -3,11 +3,10 @@ function isAsync(fn) {
 }
 
 
-var Queue = function(limitConcurringActions = 20, use_async = true, auto_start=true){
+var Queue = function(limitConcurringActions = 20, auto_start=true){
   var list_in_queue = [];
   var nb_in_action = 0;
   var limitConcurringActions = limitConcurringActions;
-  var use_async = use_async;
   var isWorking = auto_start;
 
   this.status = function(){
